@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.author   = { 'azu' => 'azuciao@gmail.com' }
   s.source   = { :git => 'https://github.com/azu/NSDate-AZExtensions.git' }
   s.platform = :ios  
-  s.source_files = 'NSDate-AZUtilities.{h,m}'
+  s.source_files = 'NSDate-AZExtensions/NSDate-AZExtensions/NSDate-AZUtilities.{h,m}'
   s.framework = 'Foundation'
 end
