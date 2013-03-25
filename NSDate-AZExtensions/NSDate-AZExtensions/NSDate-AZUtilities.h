@@ -19,6 +19,7 @@
 
 + (NSDate *)dateYesterday;
 
+
 + (NSDate *)dateWithDaysFromNow:(NSInteger) days;
 
 + (NSDate *)dateWithDaysBeforeNow:(NSInteger) days;

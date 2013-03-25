@@ -13,18 +13,18 @@
 #import "NSDate-AZUtilities.h"
 
 #define DATE_COMPONENTS (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit)
-#define CURRENT_CALENDAR [NSCalendar currentCalendar]
+#define CURRENT_CALENDAR [NSDate shareCalendar]
 
 @implementation NSDate (AZUtilities)
 
 #pragma mark - Calendar cache
 
 + (NSCalendar *)shareCalendar {
-    static NSCalendar *result = nil;
-    if (!result) {
-        result = [NSCalendar currentCalendar];
+    static NSCalendar *calendar = nil;
+    if (!calendar) {
+        calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     }
-    return result;
+    return calendar;
 }
 
 #pragma mark - Relative Dates

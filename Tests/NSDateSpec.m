@@ -16,8 +16,9 @@
 
 #define DATE_COMPONENTS (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit)
 #define CURRENT_CALENDAR [NSCalendar currentCalendar]
+
 + (void)buildExampleGroups {
-    describe(@"NSDateSpec", ^{
+    describe(@"NSDate", ^{
         NSDate *today = [NSDate date];
         describe(@"#dateAtEndOfDay", ^{
             context(@"when pass today", ^{
