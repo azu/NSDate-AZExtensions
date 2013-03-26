@@ -20,11 +20,7 @@
 #pragma mark - Calendar cache
 
 + (NSCalendar *)shareCalendar {
-    static NSCalendar *calendar = nil;
-    if (!calendar) {
-        calendar = [NSCalendar currentCalendar];
-    }
-    return calendar;
+    return [NSCalendar currentCalendar];
 }
 
 #pragma mark - Relative Dates
