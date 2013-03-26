@@ -22,7 +22,7 @@
 + (NSCalendar *)shareCalendar {
     static NSCalendar *calendar = nil;
     if (!calendar) {
-        calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        calendar = [NSCalendar currentCalendar];
     }
     return calendar;
 }
